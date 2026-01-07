@@ -3,7 +3,10 @@ import { streamText } from 'ai';
 
 import { systemPrompt } from '../src/domains/chat/data/system-prompt';
 
-// Vercel serverless function - used at runtime by Vercel
+export const config = {
+  runtime: 'edge',
+};
+
 export default async function handler(req: Request) {
   if (req.method !== 'POST') {
     return new Response('Method not allowed', { status: 405 });
