@@ -1,0 +1,156 @@
+{
+  "general": {
+    "loading": "Laen..."
+  },
+  "nav": {
+    "hero": "Avaleht",
+    "about": "Minust",
+    "skills": "Oskused",
+    "projects": "Projektid",
+    "experience": "Kogemus",
+    "testimonials": "Soovitused",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Tere, ma olen",
+    "tagline": "Viin ideed ellu kvaliteetse koodiga, kasutades TypeScript ja React tehnoloogiaid. Naudin arenduse eestvedamist, arhitektuursete lahenduste loomist ja koostööd tugevate tiimidega.",
+    "available": "Avatud uutele võimalustele",
+    "cta": {
+      "projects": "Vaata mu töid",
+      "contact": "Võta ühendust"
+    },
+    "scroll": "Keri"
+  },
+  "about": {
+    "title": "Minust",
+    "subtitle": "Tutvu minuga",
+    "bio": {
+      "p1": "Olen juhtiv Full-Stack arendaja üle 7 aasta kogemusega veebirakenduste ehitamisel. Spetsialiseerun TypeScriptile ja Reactile, keskendudes puhtale arhitektuurile, põhjalikule testkatvusele ja funktsionaalsuste juhtimisele ideest teostuseni.",
+      "p2": "Mu teekond algas Eesti startup ökosüsteemis, kus kaasasutasin Studery ja võitsin mitmeid ettevõtluse konkursse. See kogemus kujundas mu lähenemist vastutuse võtmisele ja algatuste eestvedamisele.",
+      "p3": "Mind tõmbavad keskkonnad, kus saan võtta vastutust, teha koostööd tugevate tiimidega ja pidevalt arendada nii toodet kui ennast. Kvaliteet ja meisterlikkus on mulle olulised."
+    },
+    "stats": {
+      "location": "Asukoht",
+      "experience": "Kogemus",
+      "years": "aastat",
+      "coffee": "Kohvi",
+      "cups": "tassi joodud"
+    },
+    "achievements": {
+      "title": "Saavutused"
+    },
+    "education": {
+      "title": "Haridus"
+    }
+  },
+  "skills": {
+    "title": "Oskused ja tehnoloogiad",
+    "subtitle": "Millega töötan",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps ja tööriistad",
+      "leadership": "Juhtimine"
+    }
+  },
+  "projects": {
+    "title": "Esiletõstetud projektid",
+    "subtitle": "Mida olen ehitanud",
+    "viewLive": "Vaata demo",
+    "viewCode": "Lähtekood",
+    "viewAll": "Vaata kõiki projekte GitHubis",
+    "workProject": "Töö projekt",
+    "portfolio": {
+      "title": "Isiklik portfoolio",
+      "description": "Kaasaegne glassmorphism portfoolio, mis on ehitatud React, TypeScript ja Framer Motion abil. Sujuvad animatsioonid ja responsiivne disain."
+    },
+    "lottolens": {
+      "title": "LottoLens",
+      "description": "Statistiline analüüsitööriist lotonumbrite jaoks tõenäosusarvutuste, ajalooliste andmete visualiseerimise ja nutikate numbrisoovitustega."
+    },
+    "obsidianos": {
+      "title": "ObsidianOS",
+      "description": "Juhtisin kaasaegse operatsioonisüsteemi liidese frontendi arendust. Ehitatud nullist Reactiga, põhjaliku testkatvuse ja tiheda disainikoostööga."
+    },
+    "katanaFeatures": {
+      "title": "Katana MRP funktsioonid",
+      "description": "Epicute juhtimine suurte tootmisfunktsioonide jaoks, sealhulgas varude haldamine, tootmise planeerimine ja reaalajas analüütika."
+    }
+  },
+  "experience": {
+    "title": "Kogemus",
+    "subtitle": "Minu professionaalne teekond",
+    "present": "Praegu",
+    "roles": {
+      "leadFullStack": "Juhtiv full stack arendaja",
+      "seniorEngineer": "Vanemarendaja",
+      "fullStack": "Full stack arendaja",
+      "frontend": "Frontend arendaja",
+      "trainee": "Full stack arendaja praktikant",
+      "manager": "Juhataja",
+      "mentor": "Mentor ja juht",
+      "cofounder": "Kaasasutaja",
+      "chef": "Kokk / Peakokk"
+    },
+    "obsidianos": {
+      "description": "Juhin frontendi arendust nullist. Tihe koostöö backend ja disaini meeskondadega. Ehitatud React, Zustand, TanStack Query ja põhjaliku testkatvusega."
+    },
+    "katana": {
+      "description": "Epic juhtimine suurte funktsioonide jaoks. Arhitektuuri planeerimine, arendajate sisseelamise juhtimine ja koodiülevaatuste juhtimine."
+    },
+    "netgroup": {
+      "description": "Full stack arendus Java Spring, PostgreSQL ja React-iga. SCRUM fassiliteerimine ja põhjalik testimine JUnit5 ja Jest-iga."
+    },
+    "travelwiser": {
+      "description": "Frontend arendus React, Redux ja Bootstrap-iga. Reisiga seotud veebirakenduste ehitamine."
+    },
+    "ibkrates": {
+      "description": "Praktikandi positsioon töötades Java ja GWT raamistikuga. Ettevõtte arendustavade õppimine."
+    },
+    "itcollege": {
+      "description": "Juhtisin Üliõpilaskonda ITK-TalTech ühinemise ajal. Tegelesin keeruliste organisatsiooniliste väljakutsete ja sidusrühmade läbirääkimistega."
+    },
+    "ribs": {
+      "description": "Juhendasin noori ettevõtjaid Eestist, Soomest ja Rootsist. Koolitus äriideede genereerimises ja ettevõtluses."
+    },
+    "sak": {
+      "description": "Korraldasin Saaremaa Päikese ettevõtlusprogrammi. Juhendasin noori ideede genereerimises ja äriarenduses."
+    },
+    "studery": {
+      "description": "Kaasasutasin interaktiivse õpiku platvormi koolidele Androidil. Sündis Entrum ettevõtlusprogrammi võitmisest."
+    },
+    "nycpianobar": {
+      "description": "Õppisin ise kokkamist nullist peakokani 3 nädalaga. Täielik köögitöö vastutus, sealhulgas tellimine, planeerimine ja päevaroad."
+    }
+  },
+  "testimonials": {
+    "title": "Mida inimesed ütlevad",
+    "subtitle": "Soovitused",
+    "viewAll": "Vaata kõiki LinkedInis"
+  },
+  "contact": {
+    "title": "Võta ühendust",
+    "subtitle": "Teeme koostööd",
+    "form": {
+      "name": "Sinu nimi",
+      "namePlaceholder": "Jaan Tamm",
+      "nameRequired": "Nimi on kohustuslik",
+      "email": "Sinu e-post",
+      "emailPlaceholder": "jaan@näide.ee",
+      "emailRequired": "E-post on kohustuslik",
+      "emailInvalid": "Palun sisesta kehtiv e-posti aadress",
+      "message": "Sinu sõnum",
+      "messagePlaceholder": "Tere Mihkel, soovin arutada...",
+      "messageRequired": "Sõnum on kohustuslik",
+      "send": "Saada sõnum"
+    },
+    "info": {
+      "title": "Kontaktandmed",
+      "description": "Võta julgelt ühendust! Olen alati avatud arutama uusi projekte, loovaid ideid või võimalusi olla osa sinu visioonist."
+    }
+  },
+  "footer": {
+    "copyright": "Kõik õigused kaitstud.",
+    "builtWith": "Ehitatud"
+  }
+}

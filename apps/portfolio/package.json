@@ -1,0 +1,38 @@
+{
+  "name": "@portfolio/app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@portfolio/i18n": "workspace:*",
+    "@portfolio/icons": "workspace:*",
+    "@portfolio/ui": "workspace:*",
+    "@tanstack/react-query": "^5.90.11",
+    "@tanstack/react-router": "^1.135.2",
+    "lucide-react": "^0.468.0",
+    "motion": "^12.24.7",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.70.0",
+    "react-i18next": "^15.6.0",
+    "zustand": "^5.0.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "@tanstack/react-router-devtools": "^1.135.2",
+    "@tanstack/router-plugin": "^1.135.2",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3",
+    "vite": "^6.0.7"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "general": {
+    "loading": "Loading..."
+  },
+  "nav": {
+    "hero": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "tagline": "Turning ideas into production-ready code with TypeScript and React. I enjoy leading features, architecting solutions, and building alongside great teams.",
+    "available": "Available for opportunities",
+    "cta": {
+      "projects": "View My Work",
+      "contact": "Get in Touch"
+    },
+    "scroll": "Scroll"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me",
+    "bio": {
+      "p1": "I'm a Lead Full Stack Developer with over 7 years of experience building web applications. I specialize in TypeScript and React, focusing on clean architecture, comprehensive test coverage, and leading features from concept to delivery.",
+      "p2": "My journey started in the Estonian startup ecosystem, where I co-founded Studery and won multiple entrepreneurship competitions. This experience shaped my approach to taking ownership and driving initiatives forward.",
+      "p3": "I'm drawn to environments where I can take ownership, collaborate with strong teams, and continuously improve both the product and myself. Quality and craftsmanship matter to me."
+    },
+    "stats": {
+      "location": "Location",
+      "experience": "Experience",
+      "years": "years",
+      "coffee": "Coffee",
+      "cups": "cups consumed"
+    },
+    "achievements": {
+      "title": "Highlights"
+    },
+    "education": {
+      "title": "Education"
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "What I work with",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps & Tools",
+      "leadership": "Leadership"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Things I've built",
+    "viewLive": "Live Demo",
+    "viewCode": "Source",
+    "viewAll": "View all projects on GitHub",
+    "workProject": "Work Project",
+    "portfolio": {
+      "title": "Personal Portfolio",
+      "description": "Modern glassmorphism portfolio built with React, TypeScript, and Framer Motion. Features smooth animations and responsive design."
+    },
+    "lottolens": {
+      "title": "LottoLens",
+      "description": "Statistical analysis tool for lottery numbers with probability calculations, historical data visualization, and smart number suggestions."
+    },
+    "obsidianos": {
+      "title": "ObsidianOS",
+      "description": "Led frontend development for a modern operating system interface. Built from ground zero with React, comprehensive test coverage, and close design collaboration."
+    },
+    "katanaFeatures": {
+      "title": "Katana MRP Features",
+      "description": "Epic leading for major manufacturing features including inventory management, production planning, and real-time analytics."
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey",
+    "present": "Present",
+    "roles": {
+      "leadFullStack": "Lead Full Stack Developer",
+      "seniorEngineer": "Senior Software Engineer",
+      "fullStack": "Full Stack Engineer",
+      "frontend": "Frontend Developer",
+      "trainee": "Full Stack Developer Trainee",
+      "manager": "Manager / Head",
+      "mentor": "Mentor & Manager",
+      "cofounder": "Co-Founder",
+      "chef": "Cook / Head Chef"
+    },
+    "obsidianos": {
+      "description": "Leading frontend development from ground zero. Close collaboration with backend and design teams. Built with React, Zustand, TanStack Query, and comprehensive test coverage."
+    },
+    "katana": {
+      "description": "Epic leading for major features. Architecture planning, developer onboarding, and code review leadership. Worked with PostgreSQL, Node.js, and React."
+    },
+    "netgroup": {
+      "description": "Full stack development with Java Spring, PostgreSQL, and React. SCRUM facilitation and comprehensive testing with JUnit5 and Jest."
+    },
+    "travelwiser": {
+      "description": "Frontend development with React, Redux, and Bootstrap. Building travel-related web applications."
+    },
+    "ibkrates": {
+      "description": "Trainee position working with Java and GWT framework. Learning enterprise development practices."
+    },
+    "itcollege": {
+      "description": "Led the Student Union during the ITC-TalTech merger. Handled complex organizational challenges and stakeholder negotiations."
+    },
+    "ribs": {
+      "description": "Mentored young entrepreneurs from Estonia, Finland, and Sweden. Training in business ideation and entrepreneurship."
+    },
+    "sak": {
+      "description": "Organized Saaremaa Päike entrepreneurship program. Mentored youngsters in idea generation and business development."
+    },
+    "studery": {
+      "description": "Co-founded an interactive studybook platform for schools on Android. Born from winning the Entrum entrepreneurship program."
+    },
+    "nycpianobar": {
+      "description": "Self-taught cooking skills from zero to head chef in 3 weeks. Full kitchen responsibility including ordering, planning, and daily specials."
+    }
+  },
+  "testimonials": {
+    "title": "What People Say",
+    "subtitle": "Recommendations",
+    "viewAll": "View all on LinkedIn"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's work together",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "John Doe",
+      "nameRequired": "Name is required",
+      "email": "Your Email",
+      "emailPlaceholder": "john@example.com",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email",
+      "message": "Your Message",
+      "messagePlaceholder": "Hi Mihkel, I'd like to discuss...",
+      "messageRequired": "Message is required",
+      "send": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "Feel free to reach out! I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision."
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "builtWith": "Built with"
+  }
+}
