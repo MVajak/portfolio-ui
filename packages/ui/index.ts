@@ -11,9 +11,7 @@ export * from './components/MotionCarousel';
 export * from './components/Separator';
 export * from './components/Spinner';
 export * from './components/Textarea';
-
 // Hooks
 export * from './hooks';
-
 // Utils
 export { cn } from './utils';

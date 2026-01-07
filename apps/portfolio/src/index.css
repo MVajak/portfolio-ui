@@ -64,7 +64,12 @@ code {
 
 /* Text Gradient for Hero */
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-accent-indigo) 0%, var(--color-accent-pink) 50%, var(--color-accent-indigo) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-indigo) 0%,
+    var(--color-accent-pink) 50%,
+    var(--color-accent-indigo) 100%
+  );
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -79,6 +84,6 @@ code {
   right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--color-accent-indigo), var(--color-accent-pink));
-  transform-origin: 0%;
+  transform-origin: 0;
   z-index: 100;
 }

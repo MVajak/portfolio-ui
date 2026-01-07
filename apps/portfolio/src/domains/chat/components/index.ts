@@ -1,6 +1,6 @@
-export { ChatWidget } from "./ChatWidget";
-export { ChatWindow } from "./ChatWindow";
-export { ChatHeader } from "./ChatHeader";
-export { ChatMessages } from "./ChatMessages";
-export { ChatMessage } from "./ChatMessage";
-export { ChatInput } from "./ChatInput";
+export { ChatHeader } from './ChatHeader';
+export { ChatInput } from './ChatInput';
+export { ChatMessage } from './ChatMessage';
+export { ChatMessages } from './ChatMessages';
+export { ChatWidget } from './ChatWidget';
+export { ChatWindow } from './ChatWindow';

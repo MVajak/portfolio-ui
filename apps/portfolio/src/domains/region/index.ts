@@ -1,1 +1,1 @@
-export { LanguageToggle } from "./components/LanguageToggle";
+export { LanguageToggle } from './components/LanguageToggle';

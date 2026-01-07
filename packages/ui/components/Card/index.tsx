@@ -7,10 +7,7 @@ function Card({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       data-slot="card"
-      className={cn(
-        'group flex w-full flex-col gap-2 rounded-2xl glass p-4 text-foreground',
-        className
-      )}
+      className={cn('group glass flex w-full flex-col gap-2 rounded-2xl p-4 text-foreground', className)}
       {...props}
     />
   );
@@ -20,10 +17,7 @@ function MotionCard({ className, ...props }: HTMLMotionProps<'div'>) {
   return (
     <motion.div
       data-slot="card"
-      className={cn(
-        'group flex w-full flex-col gap-2 rounded-2xl glass p-4 text-foreground',
-        className
-      )}
+      className={cn('group glass flex w-full flex-col gap-2 rounded-2xl p-4 text-foreground', className)}
       whileHover={{ scale: 1.02, y: -4 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       {...props}
