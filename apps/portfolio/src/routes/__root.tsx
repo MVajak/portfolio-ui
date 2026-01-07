@@ -1,5 +1,6 @@
 import { QueryClient } from '@tanstack/react-query';
 import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
+import { ChatWidget } from '../domains/chat';
 import { Footer, Header } from '../domains/shell';
 
 interface RouterContext {
@@ -18,6 +19,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 }

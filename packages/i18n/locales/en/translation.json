@@ -152,5 +152,13 @@
   "footer": {
     "copyright": "All rights reserved.",
     "builtWith": "Built with"
+  },
+  "chat": {
+    "title": "Ask about Mihkel",
+    "greeting": "Hi! I'm an AI assistant.",
+    "hint": "Ask me anything about Mihkel's experience, skills, or projects!",
+    "placeholder": "Ask me anything about Mihkel...",
+    "thinking": "Thinking...",
+    "error": "Sorry, I encountered an error. Please try again."
   }
 }

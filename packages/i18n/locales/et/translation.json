@@ -152,5 +152,13 @@
   "footer": {
     "copyright": "Kõik õigused kaitstud.",
     "builtWith": "Ehitatud"
+  },
+  "chat": {
+    "title": "Küsi Mihkli kohta",
+    "greeting": "Tere! Olen AI assistent.",
+    "hint": "Küsi minu käest kõike Mihkli kogemuse, oskuste või projektide kohta!",
+    "placeholder": "Küsi minu käest kõike Mihkli kohta...",
+    "thinking": "Mõtlen...",
+    "error": "Vabandust, tekkis viga. Palun proovi uuesti."
   }
 }

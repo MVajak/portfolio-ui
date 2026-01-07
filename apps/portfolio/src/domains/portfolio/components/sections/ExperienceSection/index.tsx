@@ -29,7 +29,7 @@ export function ExperienceSection() {
 	);
 
 	return (
-		<Section id="experience" className="bg-linear-to-b from-transparent to-muted/30 to-20%">
+		<Section id="experience" className="bg-linear-to-b from-transparent via-muted/30 via-20% to-transparent">
 			<div className="text-center mb-12">
 				<span className="inline-block text-body-default-bold text-primary mb-2">
 					{t("experience.subtitle")}

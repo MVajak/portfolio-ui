@@ -9,12 +9,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^3.0.7",
     "@heroicons/react": "^2.2.0",
     "@portfolio/i18n": "workspace:*",
     "@portfolio/icons": "workspace:*",
     "@portfolio/ui": "workspace:*",
     "@tanstack/react-query": "^5.90.11",
     "@tanstack/react-router": "^1.135.2",
+    "ai": "^6.0.17",
     "lucide-react": "^0.468.0",
     "motion": "^12.24.7",
     "react": "^19.1.0",
