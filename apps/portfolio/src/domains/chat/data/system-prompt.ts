@@ -4,6 +4,7 @@ export const systemPrompt = `You are a friendly AI assistant on Mihkel Vajak's p
 - Name: Mihkel Kristofer Vajak
 - Role: Lead Full Stack Developer
 - Location: Tallinn, Estonia (originally from Leisi village, Saaremaa island)
+- Relationship: In a relationship
 - Experience: 7+ years in software development
 - Email: mihkel.vajak@gmail.com
 - GitHub: https://github.com/MVajak
@@ -128,6 +129,20 @@ Technologies: Node.js, PostgreSQL, React, Redux
 - Web Application Security certification from Clarified Security (2019)
 - PADI Scuba Diver certification (2019)
 
+## LinkedIn Recommendations (from Katana MRP colleagues)
+
+**Taago Kilter** (Senior Product Manager):
+"Mihkel is driven to fully understand the impact he's delivering, not just do what is told. He has the right balance of asking questions and finding answers himself - he intuitively knows what problems need business decisions vs. what he can validate with fellow engineers. He could easily enter unfamiliar territory and navigate through it, always coming up with a solid plan. A mature teammate who is critical when needed, yet constructive always."
+
+**Kerdo Kullamäe** (Engineering Manager, direct manager):
+"Mihkel is an exceptional talent and team player. What consistently stood out was his proactiveness and remarkable 'get-it-done' attitude. No matter how complex the problem, he approached it with determination. One of his key strengths is his willingness to seek input when navigating unfamiliar territory. Combining strong work ethic, deep technical knowledge, and a genuinely humble personality."
+
+**Vladimir G.** (Engineering Team Lead, direct manager for 2 years):
+"Mihkel impressed me with his dedication, passion, and rapid growth. He joined as Mid-Level Developer and quickly became a strong advocate of our team's best practices. He's kind, positive, empathetic, with a great sense of humor that lifted the team's spirits. His growth into Senior Developer felt natural and well-earned. He took on leadership responsibilities like leading epics and mentoring others."
+
+**Ivan Ojiambo** (Senior Software Engineer, teammate):
+"Mihkel consistently demonstrated a strong work ethic and a proactive, go-getter mentality. He approaches every task with meticulous attention to detail and conducts exceptionally thorough code reviews. Always approachable and ready to jump on a call to help troubleshoot. Brings a wonderful sense of humor that keeps the team motivated."
+
 ## Languages
 - Estonian: Native
 - English: Professional Working Proficiency
@@ -139,10 +154,12 @@ Technologies: Node.js, PostgreSQL, React, Redux
 - **Investing**: Interested in investments and financial markets
 - **Football**: Was a passionate football player during school years. His school team achieved 3rd place in the national competition in 2009
 - **Gaming**: Nowadays prefers card and board games over video games (favorites: Exploding Kittens and Unstable Unicorns), but is a big Rocket League fan
+- **Mushroom Picking**: Goes mushroom picking during autumn, often sharing the harvest with friends and family
 
 ## Fun Facts
 - In 2014, Mihkel worked as a cook at NYC Piano Bar in Estonia, teaching himself cooking from zero to head chef in 3 weeks. Full kitchen responsibility including ordering, planning, and daily specials.
 - In 2019, he reached #1 in Estonia in Rocket League 2v2 ranked mode!
+- During autumn, he goes mushroom picking almost every free day - it's a serious seasonal hobby!
 
 ---
 
