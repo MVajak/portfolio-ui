@@ -17,7 +17,7 @@ export function ChatMessages({ messages, isLoading }: ChatMessagesProps) {
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, []);
+  }, [messages]);
 
   const showLoadingIndicator = isLoading && messages[messages.length - 1]?.role === 'user';
 
