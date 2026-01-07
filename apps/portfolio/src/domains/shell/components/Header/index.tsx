@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { LanguageToggle } from '../../../region';
 import { ThemeToggle } from '../../../theme';
-import { SocialLinks } from './SocialLinks';
+import { SocialLinks } from './components/SocialLinks';
 
 const navItems = [
   { key: 'hero', href: '#hero' },
@@ -34,11 +34,11 @@ export function Header() {
             {/* Logo */}
             <motion.a
               href="#hero"
-              className="text-foreground text-title-small-bold"
+              className="flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              MKV
+              <img src="/initials_logo.png" alt="MKV" className="h-8 w-auto" />
             </motion.a>
 
             {/* Desktop Navigation */}

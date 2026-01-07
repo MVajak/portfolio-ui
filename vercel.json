@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd apps/portfolio && pnpm build",
+  "outputDirectory": "apps/portfolio/dist",
+  "installCommand": "pnpm install",
+  "framework": "vite",
+  "functions": {
+    "apps/portfolio/api/*.ts": {
+      "runtime": "@vercel/node@3.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/apps/portfolio/api/:path*"
+    }
+  ]
+}
