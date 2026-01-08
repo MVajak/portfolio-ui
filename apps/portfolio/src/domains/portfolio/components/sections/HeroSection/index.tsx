@@ -36,7 +36,7 @@ export function HeroSection() {
         {/* Avatar */}
         <motion.div variants={itemVariants} className="mb-8 flex justify-center">
           <div className="relative">
-            <div className="glass h-32 w-32 rounded-full p-1 md:h-40 md:w-40">
+            <div className="glass backdrop-blur-xl h-32 w-32 rounded-full p-1 md:h-40 md:w-40">
               <Avatar src="/avatar.jpeg" alt={personalInfo.name} displayName={personalInfo.name} size="full" />
             </div>
             {/* Status indicator */}
@@ -97,7 +97,7 @@ export function HeroSection() {
           </motion.a>
           <motion.a
             href="#contact"
-            className="glass-hover inline-flex items-center justify-center rounded-full px-8 py-3 text-body-default-bold"
+            className="glass-hover backdrop-blur-xl inline-flex items-center justify-center rounded-full px-8 py-3 text-body-default-bold"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >

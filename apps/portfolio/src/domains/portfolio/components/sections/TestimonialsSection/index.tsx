@@ -22,7 +22,7 @@ export function TestimonialsSection() {
       <div className="mx-auto max-w-4xl">
         <MotionCarousel>
           {recommendations.map((rec) => (
-            <div key={rec.id} className="glass rounded-3xl p-8 md:p-12">
+            <div key={rec.id} className="glass backdrop-blur-xl rounded-3xl p-8 md:p-12">
               <QuoteIcon className="mb-6 h-12 w-12 text-primary/20" />
 
               <blockquote className="mb-8 text-foreground text-title-small leading-relaxed">"{rec.text}"</blockquote>
