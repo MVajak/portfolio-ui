@@ -12,7 +12,7 @@ export function LanguageToggle() {
   const currentLang = i18n.language.split('-')[0];
 
   return (
-    <div className="glass backdrop-blur-xl flex items-center gap-1 rounded-full p-1">
+    <div className="glass flex items-center gap-1 rounded-full p-1 backdrop-blur-xl">
       {languages.map((lang) => {
         const isActive = currentLang === lang.code;
         return (

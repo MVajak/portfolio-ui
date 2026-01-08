@@ -160,5 +160,18 @@
     "placeholder": "Küsi minu käest kõike Mihkli kohta...",
     "thinking": "Mõtlen...",
     "error": "Vabandust, tekkis viga. Palun proovi uuesti."
+  },
+  "spotlight": {
+    "search": "Otsi",
+    "placeholder": "Kirjuta käsk või otsi...",
+    "empty": "Tulemusi ei leitud.",
+    "navigation": "Navigeerimine",
+    "actions": "Tegevused",
+    "links": "Lingid",
+    "toggleTheme": "Vaheta teemat",
+    "openChat": "Küsi AI käest Mihkli kohta",
+    "navigate": "navigeeri",
+    "select": "vali",
+    "close": "sulge"
   }
 }

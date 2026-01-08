@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'motion/react';
 
 import { ChatHeader } from './ChatHeader';
@@ -17,6 +18,18 @@ interface ChatWindowProps {
 
 export function ChatWindow({ onClose, chat }: ChatWindowProps) {
   const { messages, input, setInput, isLoading, sendMessage } = chat;
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
 
   return (
     <motion.div

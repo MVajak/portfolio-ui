@@ -31,3 +31,6 @@ pnpm-debug.log*
 # cache
 .cache
 *.tsbuildinfo
+
+# TanStack Router generated files
+.tanstack

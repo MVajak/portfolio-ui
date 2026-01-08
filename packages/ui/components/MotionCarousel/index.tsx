@@ -48,7 +48,7 @@ export function MotionCarousel({ children, className, showDots = true, showNavig
           <motion.button
             type="button"
             onClick={scrollPrev}
-            className="glass backdrop-blur-xl pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full text-foreground transition-colors hover:bg-glass-hover"
+            className="glass pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full text-foreground backdrop-blur-xl transition-colors hover:bg-glass-hover"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Previous slide"
@@ -58,7 +58,7 @@ export function MotionCarousel({ children, className, showDots = true, showNavig
           <motion.button
             type="button"
             onClick={scrollNext}
-            className="glass backdrop-blur-xl pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full text-foreground transition-colors hover:bg-glass-hover"
+            className="glass pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full text-foreground backdrop-blur-xl transition-colors hover:bg-glass-hover"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Next slide"

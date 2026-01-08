@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 
@@ -7,13 +6,17 @@ import { Button } from '@portfolio/ui';
 import { useChat } from '../hooks/useChat';
 import { ChatWindow } from './ChatWindow';
 
-export function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(false);
+interface ChatWidgetProps {
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+export function ChatWidget({ isOpen, onToggle }: ChatWidgetProps) {
   const chat = useChat();
 
   return (
     <>
-      <AnimatePresence>{isOpen && <ChatWindow onClose={() => setIsOpen(false)} chat={chat} />}</AnimatePresence>
+      <AnimatePresence>{isOpen && <ChatWindow onClose={onToggle} chat={chat} />}</AnimatePresence>
 
       <motion.div
         className="fixed right-6 bottom-6 z-50"
@@ -23,7 +26,7 @@ export function ChatWidget() {
       >
         <Button
           size="lg"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={onToggle}
           className="h-14 w-14 rounded-full bg-linear-to-br from-accent-indigo to-accent-pink shadow-lg transition-shadow hover:shadow-xl"
         >
           <motion.div animate={{ rotate: isOpen ? 90 : 0 }} transition={{ duration: 0.2 }}>

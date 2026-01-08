@@ -11,7 +11,7 @@ interface ContactLinkItemProps {
 export function ContactLinkItem({ icon: Icon, label, value, href }: ContactLinkItemProps) {
   return (
     <motion.div whileHover={{ x: 4 }} className="flex items-center gap-4">
-      <div className="glass backdrop-blur-xl flex h-12 w-12 items-center justify-center rounded-xl">
+      <div className="glass flex h-12 w-12 items-center justify-center rounded-xl backdrop-blur-xl">
         <Icon className="h-5 w-5 text-primary" />
       </div>
       <div>

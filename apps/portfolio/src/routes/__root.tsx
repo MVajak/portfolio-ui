@@ -1,8 +1,10 @@
+import { useCallback, useEffect, useState } from 'react';
 import { QueryClient } from '@tanstack/react-query';
 import { createRootRouteWithContext, Outlet } from '@tanstack/react-router';
 
 import { ChatWidget } from '@/domains/chat';
 import { Footer, Header } from '@/domains/shell';
+import { PortfolioSpotlight, useSpotlightStore } from '@/domains/spotlight';
 
 interface RouterContext {
   queryClient: QueryClient;
@@ -13,6 +15,30 @@ export const Route = createRootRouteWithContext<RouterContext>()({
 });
 
 function RootComponent() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const toggleSpotlight = useSpotlightStore((state) => state.toggle);
+
+  // Handle Cmd+K keyboard shortcut
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        toggleSpotlight();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [toggleSpotlight]);
+
+  const toggleChat = useCallback(() => {
+    setIsChatOpen((prev) => !prev);
+  }, []);
+
+  const openChat = useCallback(() => {
+    setIsChatOpen(true);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background bg-glass-mesh text-foreground">
       <Header />
@@ -20,7 +46,8 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
-      <ChatWidget />
+      <ChatWidget isOpen={isChatOpen} onToggle={toggleChat} />
+      <PortfolioSpotlight onOpenChat={openChat} />
     </div>
   );
 }
