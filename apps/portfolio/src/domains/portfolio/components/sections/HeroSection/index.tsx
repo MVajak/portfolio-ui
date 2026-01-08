@@ -27,48 +27,6 @@ export function HeroSection() {
 
   return (
     <section id="hero" className="relative flex min-h-screen items-center justify-center px-6 pt-24 pb-12 md:px-8">
-      {/* Floating Glass Orbs */}
-      <motion.div
-        className="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-accent-indigo/10 blur-3xl"
-        animate={{
-          y: [0, -30, 0],
-          x: [0, 20, 0],
-          scale: [1, 1.1, 1],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: 'easeInOut',
-        }}
-      />
-      <motion.div
-        className="absolute right-1/4 bottom-1/4 h-72 w-72 rounded-full bg-accent-pink/10 blur-3xl"
-        animate={{
-          y: [0, 20, 0],
-          x: [0, -30, 0],
-          scale: [1, 1.15, 1],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: 'easeInOut',
-          delay: 1,
-        }}
-      />
-      <motion.div
-        className="absolute top-1/3 right-1/3 h-48 w-48 rounded-full bg-success/10 blur-3xl"
-        animate={{
-          y: [0, 15, 0],
-          x: [0, -15, 0],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: 'easeInOut',
-          delay: 2,
-        }}
-      />
-
       <motion.div
         className="relative z-10 mx-auto max-w-4xl text-center"
         variants={containerVariants}

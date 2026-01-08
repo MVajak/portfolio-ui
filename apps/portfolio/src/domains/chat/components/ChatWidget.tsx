@@ -15,9 +15,9 @@ export function ChatWidget() {
 
       <motion.div
         className="fixed right-6 bottom-6 z-50"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 1, type: 'spring', stiffness: 200 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.3 }}
       >
         <Button
           size="lg"
