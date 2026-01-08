@@ -1,4 +1,4 @@
-import type { FormEvent, KeyboardEvent } from 'react';
+import { type FormEvent, type KeyboardEvent, useEffect, useRef } from 'react';
 import { Send } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -14,6 +14,15 @@ interface ChatInputProps {
 
 export function ChatInput({ value, onChange, onSubmit, isLoading }: ChatInputProps) {
   const { t } = useTranslation();
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Refocus input when loading ends (response received)
+  useEffect(() => {
+    if (!isLoading) {
+      textareaRef.current?.focus();
+    }
+  }, [isLoading]);
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (value.trim() && !isLoading) {
@@ -33,6 +42,7 @@ export function ChatInput({ value, onChange, onSubmit, isLoading }: ChatInputPro
   return (
     <form onSubmit={handleSubmit} className="flex gap-2">
       <textarea
+        ref={textareaRef}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={handleKeyDown}
