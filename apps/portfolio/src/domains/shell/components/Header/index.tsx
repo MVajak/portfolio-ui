@@ -35,8 +35,8 @@ export function Header() {
               <img src="/initials_logo.png" alt="MKV" className="h-8 w-auto" />
             </motion.a>
 
-            {/* Desktop Navigation */}
-            <div className="hidden items-center gap-8 md:flex">
+            {/* Desktop Navigation - Full text (xl and above) */}
+            <div className="hidden items-center gap-8 xl:flex">
               {navItems.map((item) => (
                 <motion.a
                   key={item.key}
@@ -51,22 +51,34 @@ export function Header() {
             </div>
 
             {/* Right Side Actions */}
-            <div className="hidden items-center gap-4 md:flex">
+            <div className="hidden items-center gap-2 md:flex xl:gap-4">
+              {/* Search - Icon only (md to xl) */}
               <motion.button
                 type="button"
                 onClick={openSpotlight}
-                className="flex items-center gap-2 rounded-full bg-muted/50 px-3 py-1.5 text-body-small text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                className="flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted/50 hover:text-foreground 2xl:hidden"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Search className="h-4 w-4" />
+              </motion.button>
+
+              {/* Search - Full button (2xl and above) */}
+              <motion.button
+                type="button"
+                onClick={openSpotlight}
+                className="hidden items-center gap-2 rounded-full bg-muted/50 px-3 py-1.5 text-body-small text-muted-foreground transition-colors hover:bg-muted hover:text-foreground 2xl:flex"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <Search className="h-4 w-4" />
                 <span>{t('spotlight.search', 'Search')}</span>
                 <kbd className="flex items-center gap-0.5 rounded bg-background/50 px-1.5 py-0.5 text-body-small">
-                  {/* 17px to match the size of K */}
                   <span className="text-[17px]">⌘</span>
                   <span>K</span>
                 </kbd>
               </motion.button>
+
               <div className="h-6 w-px bg-border" />
               <SocialLinks />
               <div className="h-6 w-px bg-border" />
