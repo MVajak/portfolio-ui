@@ -4,14 +4,16 @@ import { AnimatePresence, motion } from 'motion/react';
 
 import { Button } from '@portfolio/ui';
 
+import { useChat } from '../hooks/useChat';
 import { ChatWindow } from './ChatWindow';
 
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const chat = useChat();
 
   return (
     <>
-      <AnimatePresence>{isOpen && <ChatWindow onClose={() => setIsOpen(false)} />}</AnimatePresence>
+      <AnimatePresence>{isOpen && <ChatWindow onClose={() => setIsOpen(false)} chat={chat} />}</AnimatePresence>
 
       <motion.div
         className="fixed right-6 bottom-6 z-50"

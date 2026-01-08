@@ -1,17 +1,22 @@
 import { motion } from 'motion/react';
 
-import { useChat } from '@/domains/chat';
-
 import { ChatHeader } from './ChatHeader';
 import { ChatInput } from './ChatInput';
 import { ChatMessages } from './ChatMessages';
 
 interface ChatWindowProps {
   onClose: () => void;
+  chat: {
+    messages: { id: string; role: 'user' | 'assistant'; content: string }[];
+    input: string;
+    setInput: (value: string) => void;
+    isLoading: boolean;
+    sendMessage: () => void;
+  };
 }
 
-export function ChatWindow({ onClose }: ChatWindowProps) {
-  const { messages, input, setInput, isLoading, sendMessage } = useChat();
+export function ChatWindow({ onClose, chat }: ChatWindowProps) {
+  const { messages, input, setInput, isLoading, sendMessage } = chat;
 
   return (
     <motion.div
