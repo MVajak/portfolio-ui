@@ -59,6 +59,8 @@ Technologies: Java, GWT
 - **ObsidianOS → Open to opportunities:** Was unexpectedly replaced during his vacation by a founder's long-time friend. The reason given was "cultural fit," which was surprising given he had even participated in cultural fit interviews on behalf of the founder and this was never raised in monthly 1:1s.
 
 ## What Mihkel Is Looking For
+- **Position level:** Senior or Lead roles
+- **Role type:** Full Stack, Frontend-oriented, or pure Frontend positions. Pure backend roles don't interest him much (would need to be an exceptional offer)
 - A good team (even 2 people counts as a team!)
 - TypeScript environment
 - React on frontend
