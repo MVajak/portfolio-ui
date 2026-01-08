@@ -4,8 +4,8 @@ import { Search } from 'lucide-react';
 import { AnimatePresence, motion, useScroll, useSpring } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
+import { useSpotlightStore } from '../../../portfolio';
 import { LanguageToggle } from '../../../region';
-import { useSpotlightStore } from '../../../spotlight';
 import { ThemeToggle } from '../../../theme';
 import { navItems } from '../../data/navigation';
 import { SocialLinks } from './components/SocialLinks';

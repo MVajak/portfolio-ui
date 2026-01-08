@@ -2,7 +2,8 @@ import type { ReactNode } from 'react';
 import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 
-import { Command, CommandEmpty, CommandInput, CommandList, cn } from '@portfolio/ui';
+import { cn } from '../../utils';
+import { Command, CommandEmpty, CommandInput, CommandList } from '../Command';
 
 interface SpotlightProps {
   open: boolean;

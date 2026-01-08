@@ -3,14 +3,15 @@ import { MessageCircle, Moon, Sun } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 import { GitHubIcon, LinkedInIcon } from '@portfolio/icons';
-import { CommandGroup, CommandItem, CommandShortcut } from '@portfolio/ui';
+import { CommandGroup, CommandItem, CommandShortcut, Spotlight } from '@portfolio/ui';
 
 import { personalInfo } from '@/domains/portfolio/data/personal';
 import { navItems } from '@/domains/shell/data/navigation';
 import { useThemeStore } from '@/domains/theme';
 
-import { useSpotlightStore } from '../store';
-import { Spotlight } from './Spotlight';
+import { useSpotlightStore } from './store';
+
+export { useSpotlightStore } from './store';
 
 interface PortfolioSpotlightProps {
   onOpenChat: () => void;

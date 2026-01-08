@@ -3,8 +3,8 @@ import { QueryClient } from '@tanstack/react-query';
 import { createRootRouteWithContext, Outlet } from '@tanstack/react-router';
 
 import { ChatWidget } from '@/domains/chat';
+import { PortfolioSpotlight, useSpotlightStore } from '@/domains/portfolio';
 import { Footer, Header } from '@/domains/shell';
-import { PortfolioSpotlight, useSpotlightStore } from '@/domains/spotlight';
 
 interface RouterContext {
   queryClient: QueryClient;
