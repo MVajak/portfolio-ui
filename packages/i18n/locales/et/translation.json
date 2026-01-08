@@ -155,8 +155,8 @@
   },
   "chat": {
     "title": "Küsi Mihkli kohta",
-    "greeting": "Tere! Olen AI assistent.",
-    "hint": "Küsi minu käest kõike Mihkli kogemuse, oskuste või projektide kohta!",
+    "greeting": "Tervist! Olen Mihkli AI kaaslane ja tean tema kohta päris palju.",
+    "hint": "Küsi julgelt – tema tech stack'ist, projektidest või kuidas temast sai 3 nädalaga peakokk!",
     "placeholder": "Küsi minu käest kõike Mihkli kohta...",
     "thinking": "Mõtlen...",
     "error": "Vabandust, tekkis viga. Palun proovi uuesti."

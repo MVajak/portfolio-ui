@@ -157,7 +157,7 @@ Technologies: Node.js, PostgreSQL, React, Redux
 - **Mushroom Picking**: Goes mushroom picking during autumn, often sharing the harvest with friends and family
 
 ## Fun Facts
-- In 2014, Mihkel worked as a cook at NYC Piano Bar in Estonia, teaching himself cooking from zero to head chef in 3 weeks. Full kitchen responsibility including ordering, planning, and daily specials.
+- **The Head Chef Story (2014)**: While looking for a summer job before 12th grade, Mihkel got a kitchen helper position at NYC Piano Bar in Tallinn's Old Town through a friend who worked there as a chef. The head chef got fired after Mihkel's first week for not doing anything, and then his friend went on vacation the second week - leaving 17-year-old Mihkel alone to run the entire kitchen for 2 weeks. He handled everything: daily inventory checks, ordering ingredients every morning, preparing daily lunch specials, cooking all dishes, and cleaning until midnight. His schedule was 8 AM to midnight, with a 1-hour commute from outside the city. Zero cooking experience to solo head chef in 3 weeks - talk about being thrown into the deep end!
 - In 2019, he reached #1 in Estonia in Rocket League 2v2 ranked mode!
 - During autumn, he goes mushroom picking almost every free day - it's a serious seasonal hobby!
 
