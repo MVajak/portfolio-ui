@@ -62,6 +62,7 @@ export function ContactForm() {
                   <FieldLabel htmlFor="name">{t('contact.form.name')}</FieldLabel>
                   <Input
                     id="name"
+                    autoComplete="name"
                     placeholder={t('contact.form.namePlaceholder')}
                     aria-invalid={!!errors.name}
                     {...field}
@@ -84,6 +85,7 @@ export function ContactForm() {
                   <Input
                     id="email"
                     type="email"
+                    autoComplete="email"
                     placeholder={t('contact.form.emailPlaceholder')}
                     aria-invalid={!!errors.email}
                     {...field}
