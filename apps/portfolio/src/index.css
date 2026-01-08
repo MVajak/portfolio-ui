@@ -30,19 +30,21 @@ code {
 @layer components {
   .glass {
     background: var(--color-glass);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--color-glass-border);
     box-shadow: 0 8px 32px var(--color-glass-shadow);
+    will-change: transform;
   }
 
   .glass-hover {
     background: var(--color-glass);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--color-glass-border);
     box-shadow: 0 8px 32px var(--color-glass-shadow);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
   }
 
   .glass-hover:hover {

@@ -93,18 +93,15 @@ export function Header() {
               className="glass mx-4 mt-2 rounded-2xl p-6 md:hidden"
             >
               <div className="flex flex-col gap-4">
-                {navItems.map((item, index) => (
-                  <motion.a
+                {navItems.map((item) => (
+                  <a
                     key={item.key}
                     href={item.href}
                     className="text-foreground text-title-small-bold"
                     onClick={() => setMobileMenuOpen(false)}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
                   >
                     {t(`nav.${item.key}`)}
-                  </motion.a>
+                  </a>
                 ))}
                 <div className="my-2 h-px bg-border" />
                 <div className="flex items-center justify-between">

@@ -15,10 +15,11 @@ export function ChatWindow({ onClose }: ChatWindowProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95, y: 20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.95, y: 20 }}
-      className="fixed right-6 bottom-24 z-50 flex h-125 max-h-[calc(100vh-120px)] w-95 max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded-2xl border border-border/50 bg-card/80 shadow-2xl backdrop-blur-xl"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.2 }}
+      className="fixed right-6 bottom-24 z-50 flex h-125 max-h-[calc(100vh-120px)] w-95 max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded-2xl border border-border/50 bg-card shadow-2xl backdrop-blur-sm"
     >
       <ChatHeader onClose={onClose} />
       <ChatMessages messages={messages} isLoading={isLoading} />
