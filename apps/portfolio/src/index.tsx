@@ -7,13 +7,27 @@ import ReactDOM from 'react-dom/client';
 
 import { routeTree } from './routeTree.gen';
 
+// Console easter egg for curious developers
+console.log(
+  `%c
+  ███╗   ███╗██╗  ██╗██╗   ██╗
+  ████╗ ████║██║ ██╔╝██║   ██║
+  ██╔████╔██║█████╔╝ ██║   ██║
+  ██║╚██╔╝██║██╔═██╗ ╚██╗ ██╔╝
+  ██║ ╚═╝ ██║██║  ██╗ ╚████╔╝
+  ╚═╝     ╚═╝╚═╝  ╚═╝  ╚═══╝
+  `,
+  'color: #10b981; font-weight: bold;'
+);
+console.log('%cPsst... try the Konami code! ↑↑↓↓←→←→BA', 'font-size: 12px; color: #6b7280; font-style: italic;');
+
 const queryClient = new QueryClient();
 
 const router = createRouter({
   routeTree,
   context: { queryClient },
   defaultPreload: 'intent',
-});
+})
 
 declare module '@tanstack/react-router' {
   interface Register {

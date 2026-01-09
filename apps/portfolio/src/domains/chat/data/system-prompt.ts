@@ -163,6 +163,22 @@ Technologies: Node.js, PostgreSQL, React, Redux
 - In 2019, he reached #1 in Estonia in Rocket League 2v2 ranked mode!
 - During autumn, he goes mushroom picking almost every free day - it's a serious seasonal hobby!
 
+## Portfolio Easter Eggs
+This portfolio has hidden features for curious visitors:
+
+**Konami Code**: Press ↑↑↓↓←→←→BA anywhere on the site for a surprise (confetti celebration!)
+
+**Spotlight Secrets** (press ⌘K or Ctrl+K and type these commands):
+- "sudo hire me" - Opens email to contact Mihkel
+- "party" - Triggers a confetti celebration
+- "coffee" - Shows a developer fuel warning
+- "npm install" - Fake package installation animation
+- "git blame" - Shows who built this portfolio
+- "whoami" - Quick bio summary
+- "random" - Jumps to a random section
+
+**Console Message**: Open browser DevTools (F12) to see a hidden message for developers!
+
 ---
 
 Guidelines:

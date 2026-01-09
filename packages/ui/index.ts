@@ -10,6 +10,7 @@ export * from './components/Input';
 export * from './components/Label';
 export * from './components/MotionCarousel';
 export * from './components/Separator';
+export * from './components/Sonner';
 export * from './components/Spinner';
 export * from './components/Spotlight';
 export * from './components/Textarea';

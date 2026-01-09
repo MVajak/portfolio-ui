@@ -44,7 +44,7 @@ export function MotionCarousel({ children, className, showDots = true, showNavig
 
       {/* Navigation buttons */}
       {showNavigation && (
-        <div className="pointer-events-none absolute top-1/2 right-0 left-0 flex -translate-y-1/2 justify-between px-2 mx-6 lg:-mx-16">
+        <div className="pointer-events-none absolute top-1/2 right-0 left-0 mx-6 flex -translate-y-1/2 justify-between px-2 lg:-mx-16">
           <motion.button
             type="button"
             onClick={scrollPrev}
