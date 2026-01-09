@@ -9,7 +9,7 @@ import { Toaster } from '@portfolio/ui';
 import { ChatWidget } from '@/domains/chat';
 import { PortfolioSpotlight, useSpotlightStore } from '@/domains/portfolio';
 import { Footer, Header } from '@/domains/shell';
-import { useKonamiCode } from '@/hooks';
+import { useKonamiCode } from '@/domains/secrets';
 
 interface RouterContext {
   queryClient: QueryClient;

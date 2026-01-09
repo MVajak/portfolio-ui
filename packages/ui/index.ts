@@ -18,3 +18,4 @@ export * from './components/Textarea';
 export * from './hooks';
 // Utils
 export { cn } from './utils';
+export { runToastSequence, type ToastStep, type ToastSequenceOptions } from './utils/toastSequence';

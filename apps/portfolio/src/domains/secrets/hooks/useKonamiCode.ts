@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
+import { useDiscoveryStore } from '@/domains/secrets';
+
 const KONAMI_CODE = [
   'ArrowUp',
   'ArrowUp',
@@ -15,6 +17,7 @@ const KONAMI_CODE = [
 
 export function useKonamiCode(onActivate: () => void) {
   const [inputSequence, setInputSequence] = useState<string[]>([]);
+  const { discoverSecret } = useDiscoveryStore();
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
@@ -27,6 +30,7 @@ export function useKonamiCode(onActivate: () => void) {
         if (newSequence.length === KONAMI_CODE.length && newSequence.every((k, i) => k === KONAMI_CODE[i])) {
           // Reset sequence and trigger callback
           setTimeout(() => {
+            discoverSecret('konami');
             onActivate();
             setInputSequence([]);
           }, 0);
@@ -36,7 +40,7 @@ export function useKonamiCode(onActivate: () => void) {
         return newSequence;
       });
     },
-    [onActivate]
+    [onActivate, discoverSecret]
   );
 
   useEffect(() => {

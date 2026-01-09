@@ -1,13 +1,13 @@
-import { useCallback } from 'react';
-import confetti from 'canvas-confetti';
-import { Coffee, Dice5, MessageCircle, Moon, PartyPopper, Sun, Terminal, User } from 'lucide-react';
+import { useCallback, useMemo } from 'react';
+import { MessageCircle, Moon, Sun } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 
 import { GitHubIcon, LinkedInIcon } from '@portfolio/icons';
-import { CommandGroup, CommandItem, CommandShortcut, Spotlight } from '@portfolio/ui';
+import { CommandGroup, CommandItem, CommandShortcut, runToastSequence, Spotlight } from '@portfolio/ui';
 
 import { personalInfo } from '@/domains/portfolio/data/personal';
+import { type SpotlightSecretId, secretCommands, useDiscoveryStore, useWithDiscovery } from '@/domains/secrets';
 import { navItems } from '@/domains/shell/data/navigation';
 import { useThemeStore } from '@/domains/theme';
 
@@ -23,6 +23,9 @@ export function PortfolioSpotlight({ onOpenChat }: PortfolioSpotlightProps) {
   const { t } = useTranslation();
   const { isOpen, close, toggle } = useSpotlightStore();
   const { theme, toggleTheme } = useThemeStore();
+  const withDiscovery = useWithDiscovery();
+  const discoveredCount = useDiscoveryStore((s) => s.discoveredCount);
+  const totalCount = useDiscoveryStore((s) => s.totalCount);
 
   const runCommand = useCallback(
     (command: () => void) => {
@@ -52,7 +55,13 @@ export function PortfolioSpotlight({ onOpenChat }: PortfolioSpotlightProps) {
   const handleSudoHireMe = useCallback(() => {
     close();
     toast('$ sudo hire mihkel', {
-      description: '[sudo] password for recruiter: ********\nAccess granted. Sending offer...',
+      description: (
+        <>
+          [sudo] password for recruiter: ********
+          <br />
+          Access granted. Sending offer...
+        </>
+      ),
       duration: 4000,
     });
     setTimeout(() => {
@@ -60,59 +69,68 @@ export function PortfolioSpotlight({ onOpenChat }: PortfolioSpotlightProps) {
     }, 1500);
   }, [close]);
 
-  const handleParty = useCallback(() => {
-    close();
-    // Confetti burst from multiple angles
-    const duration = 3000;
-    const end = Date.now() + duration;
-
-    const frame = () => {
-      confetti({
-        particleCount: 3,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-      });
-      confetti({
-        particleCount: 3,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-      });
-
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
-    };
-    frame();
-  }, [close]);
-
   const handleCoffee = useCallback(() => {
     close();
-    toast.warning('☕ Fuel Level: CRITICAL', {
-      description: 'Developer needs coffee to function. Please stand by...',
-      duration: 4000,
+    void runToastSequence({
+      steps: [
+        { message: '☕ Checking fuel levels...', type: 'loading' },
+        { message: '⚠️ Fuel: 20%', type: 'warning' },
+        { message: '🚨 FUEL CRITICAL: 5%', type: 'error' },
+        { message: '☕ Emergency coffee deployed!', type: 'loading' },
+      ],
+      finalToast: {
+        message: '✅ Fuel restored to 100%',
+        type: 'success',
+        description: 'Developer is now fully operational.',
+      },
     });
   }, [close]);
+
+  const handleDebug = useCallback(() => {
+    close();
+    void runToastSequence({
+      steps: [
+        { message: '🔧 Initializing debug mode...', type: 'loading' },
+        { message: '📊 Components rendered: 47' },
+        { message: '⚡ Performance: Blazingly fast™' },
+        { message: '🐛 Bugs: None (probably)' },
+      ],
+      finalToast: {
+        message: `✨ Easter eggs found: ${discoveredCount()}/${totalCount()}`,
+        type: 'success',
+        description: 'Keep exploring...',
+      },
+    });
+  }, [close, discoveredCount, totalCount]);
 
   const handleNpmInstall = useCallback(() => {
     close();
-    const toastId = toast.loading('npm install talent', {
-      description: 'Resolving dependencies...\nDownloading skills...\nLinking experience...',
-    });
-    setTimeout(() => {
-      toast.success('Installation complete!', {
-        id: toastId,
+    void runToastSequence({
+      steps: [
+        { message: 'Resolving dependencies...', type: 'loading' },
+        { message: 'Downloading skills...', type: 'loading' },
+        { message: 'Linking experience...', type: 'loading' },
+      ],
+      finalToast: {
+        message: 'Installation complete!',
+        type: 'success',
         description: 'Added 7+ years of experience to your team.',
-        duration: 3000,
-      });
-    }, 3000);
+      },
+      sequential: true,
+    });
   }, [close]);
 
   const handleGitBlame = useCallback(() => {
     close();
     toast('$ git blame portfolio.tsx', {
-      description: 'Line 1-∞: Mihkel Vajak <mihkel.vajak@gmail.com>\n\n🤖 Assisted by Claude Code',
+      description: (
+        <>
+          Line 1-∞: Mihkel Vajak
+          <br />
+          <br />
+          🤖 Assisted by Claude Code
+        </>
+      ),
       duration: 4000,
     });
   }, [close]);
@@ -120,8 +138,20 @@ export function PortfolioSpotlight({ onOpenChat }: PortfolioSpotlightProps) {
   const handleWhoami = useCallback(() => {
     close();
     toast('$ whoami', {
-      description:
-        'Mihkel Vajak\nLead Full Stack Developer\n7+ years React/TypeScript\nTallinn, Estonia\n\nCurrently: Open to opportunities',
+      description: (
+        <>
+          Mihkel Vajak
+          <br />
+          Lead Full Stack Developer
+          <br />
+          7+ years React/TypeScript
+          <br />
+          Tallinn, Estonia
+          <br />
+          <br />
+          Currently: Open to opportunities
+        </>
+      ),
       duration: 5000,
     });
   }, [close]);
@@ -134,6 +164,19 @@ export function PortfolioSpotlight({ onOpenChat }: PortfolioSpotlightProps) {
       duration: 2000,
     });
   }, [navigateTo]);
+
+  const secretHandlers: Record<SpotlightSecretId, () => void> = useMemo(
+    () => ({
+      sudoHireMe: withDiscovery('sudoHireMe', handleSudoHireMe),
+      coffee: withDiscovery('coffee', handleCoffee),
+      debug: withDiscovery('debug', handleDebug),
+      npmInstall: withDiscovery('npmInstall', handleNpmInstall),
+      gitBlame: withDiscovery('gitBlame', handleGitBlame),
+      whoami: withDiscovery('whoami', handleWhoami),
+      random: withDiscovery('random', handleRandom),
+    }),
+    [withDiscovery, handleSudoHireMe, handleCoffee, handleDebug, handleNpmInstall, handleGitBlame, handleWhoami, handleRandom]
+  );
 
   return (
     <Spotlight
@@ -198,41 +241,13 @@ export function PortfolioSpotlight({ onOpenChat }: PortfolioSpotlightProps) {
 
       {/* Secret Commands - hidden by default, shown when typed */}
       <CommandGroup heading="Secrets">
-        <CommandItem keywords={['sudo', 'hire', 'me', 'job']} onSelect={handleSudoHireMe}>
-          <Terminal />
-          <span>sudo hire me</span>
-          <CommandShortcut>🔐</CommandShortcut>
-        </CommandItem>
-        <CommandItem keywords={['party', 'celebrate', 'confetti']} onSelect={handleParty}>
-          <PartyPopper />
-          <span>party</span>
-          <CommandShortcut>🎉</CommandShortcut>
-        </CommandItem>
-        <CommandItem keywords={['coffee', 'caffeine', 'fuel']} onSelect={handleCoffee}>
-          <Coffee />
-          <span>coffee</span>
-          <CommandShortcut>☕</CommandShortcut>
-        </CommandItem>
-        <CommandItem keywords={['npm', 'install', 'yarn', 'pnpm']} onSelect={handleNpmInstall}>
-          <Terminal />
-          <span>npm install</span>
-          <CommandShortcut>📦</CommandShortcut>
-        </CommandItem>
-        <CommandItem keywords={['git', 'blame', 'who']} onSelect={handleGitBlame}>
-          <Terminal />
-          <span>git blame</span>
-          <CommandShortcut>🔍</CommandShortcut>
-        </CommandItem>
-        <CommandItem keywords={['whoami', 'who', 'am', 'i', 'about']} onSelect={handleWhoami}>
-          <User />
-          <span>whoami</span>
-          <CommandShortcut>👤</CommandShortcut>
-        </CommandItem>
-        <CommandItem keywords={['random', 'surprise', 'lucky']} onSelect={handleRandom}>
-          <Dice5 />
-          <span>random</span>
-          <CommandShortcut>🎲</CommandShortcut>
-        </CommandItem>
+        {secretCommands.map((cmd) => (
+          <CommandItem key={cmd.id} keywords={[...cmd.keywords]} onSelect={secretHandlers[cmd.id]}>
+            <cmd.icon />
+            <span>{cmd.label}</span>
+            <CommandShortcut>{cmd.shortcut}</CommandShortcut>
+          </CommandItem>
+        ))}
       </CommandGroup>
     </Spotlight>
   );

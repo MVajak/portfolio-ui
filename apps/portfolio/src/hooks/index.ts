@@ -1,1 +1,0 @@
-export { useKonamiCode } from './useKonamiCode';
