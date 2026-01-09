@@ -44,11 +44,11 @@ export function MotionCarousel({ children, className, showDots = true, showNavig
 
       {/* Navigation buttons */}
       {showNavigation && (
-        <div className="pointer-events-none absolute top-1/2 right-0 left-0 flex -translate-y-1/2 justify-between px-2 lg:-mx-16">
+        <div className="pointer-events-none absolute top-1/2 right-0 left-0 flex -translate-y-1/2 justify-between px-2 mx-6 lg:-mx-16">
           <motion.button
             type="button"
             onClick={scrollPrev}
-            className="glass pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-linear-to-r from-background/20 via-background/10 to-transparent text-foreground transition-colors hover:bg-glass-hover md:backdrop-blur-xl"
+            className="glass pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-linear-to-r from-background via-background/20 to-transparent text-foreground transition-colors hover:bg-glass-hover md:backdrop-blur-xl"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Previous slide"
@@ -58,7 +58,7 @@ export function MotionCarousel({ children, className, showDots = true, showNavig
           <motion.button
             type="button"
             onClick={scrollNext}
-            className="glass pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full text-foreground transition-colors hover:bg-glass-hover md:backdrop-blur-xl"
+            className="glass pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-linear-to-l from-background via-background/20 to-transparent text-foreground transition-colors hover:bg-glass-hover md:backdrop-blur-xl"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Next slide"
