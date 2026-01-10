@@ -172,6 +172,17 @@
     "openChat": "Ask AI about Mihkel",
     "navigate": "navigate",
     "select": "select",
-    "close": "close"
+    "close": "close",
+    "secrets": "Secrets"
+  },
+  "secrets": {
+    "konami": {
+      "title": "Achievement Unlocked!",
+      "description": "You found the Konami code! You are a true gamer."
+    },
+    "idle": {
+      "title": "Still here?",
+      "description": "Now that's commitment! Thanks for sticking around."
+    }
   }
 }

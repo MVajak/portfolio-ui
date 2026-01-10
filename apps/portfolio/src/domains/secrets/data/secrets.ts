@@ -10,7 +10,10 @@ export const secretCommands = [
   { id: 'random', keywords: ['random', 'surprise', 'lucky'], icon: Dice5, label: 'random', shortcut: '🎲' },
 ] as const;
 
-export const secretKeys = [{id: 'konami'}]
+export const secretKeys = [
+  { id: 'konami' },
+  { id: 'idle' },
+] as const;
 
 // Spotlight secret IDs (derived from secretCommands)
 export type SpotlightSecretId = (typeof secretCommands)[number]['id'];

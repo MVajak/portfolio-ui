@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { QueryClient } from '@tanstack/react-query';
 import { createRootRouteWithContext, Outlet } from '@tanstack/react-router';
 import confetti from 'canvas-confetti';
+import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 
 import { Toaster } from '@portfolio/ui';
@@ -9,7 +10,7 @@ import { Toaster } from '@portfolio/ui';
 import { ChatWidget } from '@/domains/chat';
 import { PortfolioSpotlight, useSpotlightStore } from '@/domains/portfolio';
 import { Footer, Header } from '@/domains/shell';
-import { useKonamiCode } from '@/domains/secrets';
+import { useIdleWatcher, useKonamiCode } from '@/domains/secrets';
 
 interface RouterContext {
   queryClient: QueryClient;
@@ -20,6 +21,7 @@ export const Route = createRootRouteWithContext<RouterContext>()({
 });
 
 function RootComponent() {
+  const { t } = useTranslation();
   const [isChatOpen, setIsChatOpen] = useState(false);
   const toggleSpotlight = useSpotlightStore((state) => state.toggle);
 
@@ -37,13 +39,23 @@ function RootComponent() {
       origin: { x: 0.9, y: 0.6 },
     });
 
-    toast.success('Achievement Unlocked!', {
-      description: 'You found the Konami code! You are a true gamer.',
+    toast.success(t('secrets.konami.title'), {
+      description: t('secrets.konami.description'),
       duration: 5000,
     });
-  }, []);
+  }, [t]);
 
   useKonamiCode(handleKonamiCode);
+
+  // Idle watcher easter egg (2 minutes of inactivity)
+  const handleIdle = useCallback(() => {
+    toast(t('secrets.idle.title'), {
+      description: t('secrets.idle.description'),
+      duration: 5000,
+    });
+  }, [t]);
+
+  useIdleWatcher(handleIdle);
 
   // Handle Cmd+K keyboard shortcut
   useEffect(() => {

@@ -240,7 +240,7 @@ export function PortfolioSpotlight({ onOpenChat }: PortfolioSpotlightProps) {
       </CommandGroup>
 
       {/* Secret Commands - hidden by default, shown when typed */}
-      <CommandGroup heading="Secrets">
+      <CommandGroup heading={t('spotlight.secrets')}>
         {secretCommands.map((cmd) => (
           <CommandItem key={cmd.id} keywords={[...cmd.keywords]} onSelect={secretHandlers[cmd.id]}>
             <cmd.icon />

@@ -172,6 +172,17 @@
     "openChat": "Küsi AI käest Mihkli kohta",
     "navigate": "navigeeri",
     "select": "vali",
-    "close": "sulge"
+    "close": "sulge",
+    "secrets": "Käsud"
+  },
+  "secrets": {
+    "konami": {
+      "title": "Saavutus avatud!",
+      "description": "Leidsid Konami koodi! Oled tõeline mängur."
+    },
+    "idle": {
+      "title": "Ikka siin?",
+      "description": "See on pühendumus! Aitäh, et jäid."
+    }
   }
 }
