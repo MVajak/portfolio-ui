@@ -14,7 +14,7 @@
   "hero": {
     "greeting": "Tere, ma olen",
     "tagline": "Viin ideed ellu kvaliteetse koodiga, kasutades TypeScript ja React tehnoloogiaid. Naudin arenduse eestvedamist, arhitektuursete lahenduste loomist ja koostööd tugevate tiimidega.",
-    "available": "Avatud uutele võimalustele",
+    "available": "Avatud võimalustele ja vabakutselisele tööle",
     "cta": {
       "projects": "Vaata mu töid",
       "contact": "Võta ühendust"
@@ -93,7 +93,7 @@
       "chef": "Kokk / Peakokk"
     },
     "obsidianos": {
-      "description": "Juhin frontendi arendust nullist. Tihe koostöö backend ja disaini meeskondadega. Ehitatud React, Zustand, TanStack Query ja põhjaliku testkatvusega."
+      "description": "Juhin frontendi arendust nullist IFA (sõltumatu finantsnõustaja) platvormi jaoks. Tihe koostöö backend ja disaini meeskondadega. Ehitatud React, Zustand, TanStack Query ja põhjaliku testkatvusega."
     },
     "katana": {
       "description": "Epic juhtimine suurte funktsioonide jaoks. Arhitektuuri planeerimine, arendajate sisseelamise juhtimine ja koodiülevaatuste juhtimine."

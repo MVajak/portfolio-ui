@@ -14,7 +14,7 @@
   "hero": {
     "greeting": "Hi, I'm",
     "tagline": "Turning ideas into production-ready code with TypeScript and React. I enjoy leading features, architecting solutions, and building alongside great teams.",
-    "available": "Available for opportunities",
+    "available": "Open to opportunities & freelance",
     "cta": {
       "projects": "View My Work",
       "contact": "Get in Touch"
@@ -93,7 +93,7 @@
       "chef": "Cook / Head Chef"
     },
     "obsidianos": {
-      "description": "Leading frontend development from ground zero. Close collaboration with backend and design teams. Built with React, Zustand, TanStack Query, and comprehensive test coverage."
+      "description": "Leading frontend development from ground zero for an IFA (Independent Financial Advisor) platform. Close collaboration with backend and design teams. Built with React, Zustand, TanStack Query, and comprehensive test coverage."
     },
     "katana": {
       "description": "Epic leading for major features. Architecture planning, developer onboarding, and code review leadership. Worked with PostgreSQL, Node.js, and React."
