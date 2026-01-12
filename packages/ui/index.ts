@@ -14,6 +14,7 @@ export * from './components/Sonner';
 export * from './components/Spinner';
 export * from './components/Spotlight';
 export * from './components/Textarea';
+export * from './components/ToggleGroup';
 // Hooks
 export * from './hooks';
 // Utils
