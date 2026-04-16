@@ -31,8 +31,6 @@ export function useChat() {
     };
 
     try {
-      setMessages((prev) => [...prev, assistantMessage]);
-
       const stream = streamChatResponse({
         messages: allMessages.map((m) => ({
           role: m.role,
@@ -40,7 +38,13 @@ export function useChat() {
         })),
       });
 
+      let started = false;
       for await (const chunk of stream) {
+        if (!started) {
+          started = true;
+          setMessages((prev) => [...prev, { ...assistantMessage, content: chunk }]);
+          continue;
+        }
         setMessages((prev) =>
           prev.map((m) => (m.id === assistantMessage.id ? { ...m, content: m.content + chunk } : m))
         );
