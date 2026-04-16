@@ -23,7 +23,7 @@ export function ChatMessages({ messages, isLoading }: ChatMessagesProps) {
   const showLoadingIndicator = isLoading && messages[messages.length - 1]?.role === 'user';
 
   return (
-    <div className="flex-1 space-y-4 overflow-y-auto p-4">
+    <div className="flex-1 space-y-4 overflow-y-auto overscroll-contain p-4">
       {messages.length === 0 && (
         <div className="py-8 text-center text-body-small text-muted-foreground">
           <p>{t('chat.greeting')}</p>

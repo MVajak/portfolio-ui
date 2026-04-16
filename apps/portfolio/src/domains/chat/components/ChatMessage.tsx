@@ -28,7 +28,7 @@ export function ChatMessage({ role, content }: ChatMessageProps) {
       />
       <div
         className={cn(
-          'max-w-[80%] rounded-2xl px-4 py-2',
+          'max-w-[88%] rounded-2xl px-4 py-2 sm:max-w-[80%]',
           isAssistant
             ? 'border border-border/50 bg-card/50 text-foreground backdrop-blur-sm'
             : 'bg-primary text-primary-foreground'

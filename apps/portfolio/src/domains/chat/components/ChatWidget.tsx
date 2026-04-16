@@ -2,6 +2,7 @@ import { MessageCircle } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 
 import { Button } from '@portfolio/ui';
+import { cn } from '@portfolio/ui/utils';
 
 import { useChat } from '../hooks/useChat';
 import { ChatWindow } from './ChatWindow';
@@ -19,7 +20,10 @@ export function ChatWidget({ isOpen, onToggle }: ChatWidgetProps) {
       <AnimatePresence>{isOpen && <ChatWindow onClose={onToggle} chat={chat} />}</AnimatePresence>
 
       <motion.div
-        className="fixed right-6 bottom-6 z-50"
+        className={cn(
+          'fixed right-6 bottom-[max(1.5rem,env(safe-area-inset-bottom))] z-50',
+          isOpen && 'hidden sm:block'
+        )}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.3 }}

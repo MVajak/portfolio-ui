@@ -50,7 +50,7 @@ export function ChatInput({ value, onChange, onSubmit, isLoading }: ChatInputPro
         disabled={isLoading}
         rows={1}
         className={cn(
-          'flex-1 rounded-xl border border-border bg-background/50 px-4 py-3 text-body-small text-foreground placeholder:text-muted-foreground',
+          'flex-1 rounded-xl border border-border bg-background/50 px-4 py-3 text-base text-foreground placeholder:text-muted-foreground sm:text-body-small',
           'outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary',
           'disabled:cursor-not-allowed disabled:opacity-50',
           'max-h-[120px] min-h-[44px] resize-none'
