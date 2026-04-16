@@ -45,8 +45,8 @@ export function ChatWindow({ onClose, chat }: ChatWindowProps) {
     const el = sheetRef.current;
     if (!el) return;
     const sync = () => {
+      el.style.top = `${vv.offsetTop}px`;
       el.style.height = `${vv.height}px`;
-      el.style.transform = `translateY(${vv.offsetTop}px)`;
     };
     sync();
     vv.addEventListener('resize', sync);
@@ -54,8 +54,8 @@ export function ChatWindow({ onClose, chat }: ChatWindowProps) {
     return () => {
       vv.removeEventListener('resize', sync);
       vv.removeEventListener('scroll', sync);
+      el.style.top = '';
       el.style.height = '';
-      el.style.transform = '';
     };
   }, []);
 
@@ -72,14 +72,14 @@ export function ChatWindow({ onClose, chat }: ChatWindowProps) {
 
       <div
         ref={sheetRef}
-        className="fixed inset-x-0 bottom-0 z-50 h-[100dvh] sm:inset-x-auto sm:right-6 sm:bottom-24 sm:h-125 sm:max-h-[calc(100dvh-120px)] sm:w-95 sm:max-w-[calc(100vw-48px)]"
+        className="fixed inset-x-0 top-0 z-50 h-[100dvh] sm:inset-x-auto sm:top-auto sm:right-6 sm:bottom-24 sm:h-125 sm:max-h-[calc(100dvh-120px)] sm:w-95 sm:max-w-[calc(100vw-48px)]"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.2 }}
-          className="flex h-full w-full flex-col overflow-hidden overscroll-contain rounded-t-2xl border-border/50 border-t border-x bg-card shadow-2xl backdrop-blur-sm sm:rounded-2xl sm:border"
+          className="flex h-full w-full flex-col overflow-hidden overscroll-contain border-border/50 bg-card shadow-2xl backdrop-blur-sm sm:rounded-2xl sm:border"
         >
           <ChatHeader onClose={onClose} />
           <ChatMessages messages={messages} isLoading={isLoading} />
