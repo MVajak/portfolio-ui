@@ -19,7 +19,7 @@ export function ChatInput({ value, onChange, onSubmit, isLoading }: ChatInputPro
   // Refocus input when loading ends (response received)
   useEffect(() => {
     if (!isLoading) {
-      textareaRef.current?.focus();
+      textareaRef.current?.focus({ preventScroll: true });
     }
   }, [isLoading]);
 

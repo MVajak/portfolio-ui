@@ -13,17 +13,19 @@ interface ChatMessagesProps {
 
 export function ChatMessages({ messages, isLoading }: ChatMessagesProps) {
   const { t } = useTranslation();
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: scroll when messages change
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const el = containerRef.current;
+    if (!el) return;
+    el.scrollTo({ top: el.scrollHeight, behavior: 'smooth' });
   }, [messages]);
 
   const showLoadingIndicator = isLoading && messages[messages.length - 1]?.role === 'user';
 
   return (
-    <div className="flex-1 space-y-4 overflow-y-auto overscroll-contain p-4">
+    <div ref={containerRef} className="flex-1 space-y-4 overflow-y-auto overscroll-contain p-4">
       {messages.length === 0 && (
         <div className="py-8 text-center text-body-small text-muted-foreground">
           <p>{t('chat.greeting')}</p>
@@ -45,8 +47,6 @@ export function ChatMessages({ messages, isLoading }: ChatMessagesProps) {
           </div>
         </div>
       )}
-
-      <div ref={messagesEndRef} />
     </div>
   );
 }
