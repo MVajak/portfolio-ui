@@ -11,6 +11,14 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: 'url-enrich',
+    titleKey: 'projects.urlEnrich.title',
+    descriptionKey: 'projects.urlEnrich.description',
+    technologies: ['React', 'TypeScript', 'Node.js', 'Fastify', 'Anthropic SDK', 'Zod', 'Tailwind CSS'],
+    sourceUrl: 'https://github.com/MVajak/url-enrich',
+    featured: true,
+  },
+  {
     id: 'lottolens',
     titleKey: 'projects.lottolens.title',
     descriptionKey: 'projects.lottolens.description',

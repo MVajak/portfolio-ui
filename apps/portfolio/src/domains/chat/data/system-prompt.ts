@@ -69,7 +69,7 @@ Technologies: Java, GWT
 - Node.js on backend preferred, but open to Python or Java (quick to get familiar)
 - A workplace where he can grow and impact the product
 - Being valued as a team member
-- Prefers remote work, but open to discussing on-site/hybrid depending on the offer and location (Estonia, UK, or elsewhere in Europe)
+- Open to relocation — not limited to Estonia-based companies. Prefers remote work, but happy to discuss on-site or hybrid roles anywhere in Europe (UK and elsewhere) for the right opportunity.
 - **Domain experience:** Manufacturing/ERP (Katana), IFA/FinTech (ObsidianOS)
 
 ## Notable Achievements at Katana MRP
@@ -114,6 +114,10 @@ Epic Leading, Feature Planning, Architectural Planning, ADRs, Technical Document
 ### Personal Portfolio (https://mvajak.com)
 Modern glassmorphism portfolio built with React, TypeScript, and Framer Motion. Features smooth animations and responsive design.
 Source: https://github.com/MVajak/portfolio-ui
+
+### url-enrich (https://github.com/MVajak/url-enrich)
+AI-powered B2B sales intelligence tool. Takes a company URL and returns a structured summary, industry, three reasons to reach out, three contacts, and two recent news items — with verified facts visibly distinct from AI inferences. Uses Anthropic Claude with forced tool-use for guaranteed structured output, plus a cross-check guard that drops any source URL not present in the original Tavily search results, so the response can't smuggle fabricated sources past the gate.
+Technologies: React, TypeScript, Node.js, Fastify, Anthropic SDK (Claude), Firecrawl, Tavily, Zod, Tailwind CSS, shadcn/ui, pnpm workspaces
 
 ### LottoLens (https://lottolens.io)
 Statistical analysis tool for lottery numbers with probability calculations, historical data visualization, and smart number suggestions.

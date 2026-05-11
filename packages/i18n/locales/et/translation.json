@@ -64,6 +64,10 @@
       "title": "Isiklik portfoolio",
       "description": "Kaasaegne glassmorphism portfoolio, mis on ehitatud React, TypeScript ja Framer Motion abil. Sujuvad animatsioonid ja responsiivne disain."
     },
+    "urlEnrich": {
+      "title": "url-enrich",
+      "description": "AI-põhine B2B müügiteabe tööriist. Muundab ettevõtte URL-i struktureeritud ülevaateks — kokkuvõte, valdkond, kontaktivõtu põhjused, kontaktid ja viimased uudised — kus kontrollitud faktid on selgelt eristatud AI järeldustest."
+    },
     "lottolens": {
       "title": "LottoLens",
       "description": "Statistiline analüüsitööriist lotonumbrite jaoks tõenäosusarvutuste, ajalooliste andmete visualiseerimise ja nutikate numbrisoovitustega."
