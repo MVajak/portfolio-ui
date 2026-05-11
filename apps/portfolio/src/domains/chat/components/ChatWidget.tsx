@@ -1,5 +1,6 @@
 import { MessageCircle } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
+import { useEffect } from 'react';
 
 import { Button } from '@portfolio/ui';
 import { cn } from '@portfolio/ui/utils';
@@ -14,6 +15,11 @@ interface ChatWidgetProps {
 
 export function ChatWidget({ isOpen, onToggle }: ChatWidgetProps) {
   const chat = useChat();
+  const { warmup } = chat;
+
+  useEffect(() => {
+    if (isOpen) warmup();
+  }, [isOpen, warmup]);
 
   return (
     <>

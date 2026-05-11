@@ -1,14 +1,25 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { streamChatResponse } from '../queries';
+import { primeChat, streamChatResponse } from '../queries';
 import type { Message } from '../types';
+
+const WARMUP_COOLDOWN_MS = 4 * 60 * 1000;
 
 export function useChat() {
   const { t } = useTranslation();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const lastWarmupRef = useRef(0);
+
+  const warmup = useCallback(() => {
+    if (isLoading) return;
+    const now = Date.now();
+    if (now - lastWarmupRef.current < WARMUP_COOLDOWN_MS) return;
+    lastWarmupRef.current = now;
+    void primeChat();
+  }, [isLoading]);
 
   const sendMessage = useCallback(async () => {
     if (!input.trim() || isLoading) return;
@@ -75,5 +86,6 @@ export function useChat() {
     isLoading,
     sendMessage,
     clearMessages,
+    warmup,
   };
 }
